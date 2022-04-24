@@ -9,7 +9,7 @@ import com.damlayagmur.dictionaryapp.domain.model.WordInfo
 data class WordInfoEntity(
     val word: String,
     val phonetic: String,
-    val sourceUrl: List<String>,
+   // val sourceUrl: List<String>,
     val meanings: List<Meaning>,
     @PrimaryKey val id: Int? = null
 ) {
@@ -18,7 +18,7 @@ data class WordInfoEntity(
             meanings = meanings,
             word = word,
             phonetic = phonetic,
-            sourceUrls = sourceUrl
+            //sourceUrls = sourceUrl
         )
     }
 }
