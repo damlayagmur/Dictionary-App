@@ -14,7 +14,7 @@ data class WordInfoDto(
         return WordInfoEntity(
         meanings = meanings.map { it.toMeaning() },
         phonetic = phonetic,
-        sourceUrl = sourceUrls,
+        //sourceUrl = sourceUrls,
         word = word
         )
     }

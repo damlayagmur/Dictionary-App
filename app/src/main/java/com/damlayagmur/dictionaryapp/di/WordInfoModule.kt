@@ -2,6 +2,8 @@ package com.damlayagmur.dictionaryapp.di
 
 import android.app.Application
 import androidx.room.Room
+import androidx.room.TypeConverters
+import com.damlayagmur.dictionaryapp.data.local.Converters
 import com.damlayagmur.dictionaryapp.data.local.WordInfoDao
 import com.damlayagmur.dictionaryapp.data.local.WordInfoDatabase
 import com.damlayagmur.dictionaryapp.data.remote.DictionaryApi
@@ -42,7 +44,7 @@ class WordInfoModule {
     fun provideWordInfoDatabase(app: Application): WordInfoDatabase {
         return Room.databaseBuilder(
             app, WordInfoDatabase::class.java, "word_db"
-        ).addTypeConverter(GsonParser(Gson())).build()
+        ).addTypeConverter(Converters(GsonParser(Gson()))).build()
     }
 
     @Provides

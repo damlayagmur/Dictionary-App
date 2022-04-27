@@ -11,6 +11,5 @@ import com.damlayagmur.dictionaryapp.data.local.entity.WordInfoEntity
 )
 @TypeConverters(Converters::class)
 abstract class WordInfoDatabase: RoomDatabase() {
-
     abstract val dao: WordInfoDao
 }
